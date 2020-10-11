@@ -14,6 +14,28 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    int lado_1 = 5;
+    int lado_2 = 5;
+    int lado_3 = 5;
+
+    cout << "Ingrese el lado 1: ";
+    cin >> lado_1;
+    cout << "Ingrese el lado 2: ";
+    cin >> lado_2;
+    cout << "Ingrese el lado 3: ";
+    cin >> lado_3;
+
+    if (lado_1 == lado_2 && lado_2 == lado_3 && lado_1 == lado_3)
+        cout << "Se forma un triangulo equilatero" << endl;
+
+    else if ((lado_1 == lado_2 && lado_3 < 2*lado_1) || (lado_2 == lado_3 && lado_1 < 2*lado_2) || (lado_1 == lado_3 && lado_2 < 2*lado_3) )
+        cout << "Se forma un triangulo isoceles" << endl;
+
+    else if ((lado_1 == lado_2 && lado_3 >= 2*lado_1) || (lado_2 == lado_3 && lado_1 >= 2*lado_2) || (lado_1 == lado_3 && lado_2 >= 2*lado_3) )
+        cout << "Las longiudes ingresadas no forman un triangulo " << endl;
+
+    else
+        cout << "Se forma un triangulo escaleno" << endl;
+
     return 0;
 }
